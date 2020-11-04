@@ -44,20 +44,21 @@ def apply_kernel(img, img_copy, x, y, kernel):
             # Note that you will use getPixel to get the pixel from img_copy
             # and kernel[???][???] to get the value in the kernel.
             pass
-    if red_sum > 255
+    if red_sum > 255:
         red_sum = 255
-    elif red_sum < 0 
+    elif red_sum < 0:
         red_sum = 0
     
-     if green_sum > 255
+    if green_sum > 255:
         green_sum = 255
-    elif green_sum < 0 
+    elif green_sum < 0:
         green_sum = 0
     
-     if blue_sum > 255
+    if blue_sum > 255:
         blue_sum = 255
-    elif blue_sum < 0 
+    elif blue_sum < 0:
         blue_sum = 0
+
     rgb_tuple = (red_sum, green_sum, blue_sum)
     img.setPixel(x,y, rgb_tuple)
 
