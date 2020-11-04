@@ -26,6 +26,17 @@ def apply_kernel(img, img_copy, x, y, kernel):
 
     for i in range(-1, 2):
         for j in range(-1, 2):
+            
+            pix = img_copy.getPixel(x,y)
+            multiplier = kernel[i][j]
+            red = pix.getRed() * multiplier
+            green = pix.getGreen() * multiplier
+            blue = pix.Blue() * multiplier
+
+            red_sum += red
+            green_sum += green
+            blue_sum += blue
+
             # To do: Get the correct neighborhood pixel
 
             # To do: add to red_sum, green_sum, and blue_sum based on
@@ -33,6 +44,25 @@ def apply_kernel(img, img_copy, x, y, kernel):
             # Note that you will use getPixel to get the pixel from img_copy
             # and kernel[???][???] to get the value in the kernel.
             pass
+    if red_sum > 255
+        red_sum = 255
+    elif red_sum < 0 
+        red_sum = 0
+    
+     if green_sum > 255
+        green_sum = 255
+    elif green_sum < 0 
+        green_sum = 0
+    
+     if blue_sum > 255
+        blue_sum = 255
+    elif blue_sum < 0 
+        blue_sum = 0
+    rgb_tuple = (red_sum, green_sum, blue_sum)
+    img.setPixel(x,y, rgb_tuple)
+
+
+
 
     # To do: set the red, green, and blue components of the pixel at (x,y) to
     # the sums we calculated.
