@@ -27,8 +27,9 @@ def apply_kernel(img, img_copy, x, y, kernel):
     for i in range(-1, 2):
         for j in range(-1, 2):
             
-            pix = img_copy.getPixel(x,y)
+            pix = img_copy.getPixel( x + i, y + j)
             multiplier = kernel[i][j]
+
 
             red = pix.getRed() * multiplier
             green = pix.getGreen() * multiplier
@@ -60,7 +61,7 @@ def apply_kernel(img, img_copy, x, y, kernel):
     elif blue_sum < 0:
         blue_sum = 0
     rgb_tuple = (red_sum, green_sum, blue_sum)
-    print(rgb_tuple)
+  
     img.setPixel(x,y, rgb_tuple)
 
 
