@@ -28,7 +28,7 @@ def apply_kernel(img, img_copy, x, y, kernel):
         for j in range(-1, 2):
             
             pix = img_copy.getPixel( x + i, y + j)
-            multiplier = kernel[i][j]
+            multiplier = kernel[j][i]
 
 
             red = pix.getRed() * multiplier
