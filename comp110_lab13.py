@@ -31,7 +31,7 @@ def apply_kernel(img, img_copy, x, y, kernel):
             multiplier = kernel[i][j]
             red = pix.getRed() * multiplier
             green = pix.getGreen() * multiplier
-            blue = pix.Blue() * multiplier
+            blue = pix.getBlue() * multiplier
 
             red_sum += red
             green_sum += green
