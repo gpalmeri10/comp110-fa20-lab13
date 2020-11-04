@@ -86,9 +86,9 @@ def convolution(img, kernel):
     img_copy = img.copy()
 
     # To Do: modify range to avoid border pixels
-    for x in range(img.getWidth() - 1 ):
-        for y in range(img.getHeight() -1 ):
-            apply_kernel (img, img, x, y, kernel)
+    for x in range(1, img.getWidth() - 1 ):
+        for y in range(1, img.getHeight() - 1 ):
+            apply_kernel (img, img_copy, x, y, kernel)
             pass
 
 def main():
